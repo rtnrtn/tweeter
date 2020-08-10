@@ -23,6 +23,14 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
- body {
-   font-family: 'Source Sans Pro', sans-serif;
- }
+body {
+  display: flex;
+  font-family: 'Source Sans Pro', sans-serif;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center; 
+}
+
+main {
+  width: 90%;
+}

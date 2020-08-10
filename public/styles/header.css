@@ -7,8 +7,3 @@ header {
   align-items: center;
   flex-flow: column wrap;
 }
-
-/* 
-The avatar should be centered vertically and horizontally (Hint: the justify-content and align-items properties are helpful for centering things if you're using Flexbox.)
- 
-*/
