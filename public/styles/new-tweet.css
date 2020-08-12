@@ -2,7 +2,8 @@ section.new-tweet {
   display: flex;
   font-family: 'Source Sans Pro', sans-serif;
   flex-flow: column wrap;
-  align-items: flex-start; 
+  align-items: flex-start;
+  margin-bottom: 50px; 
 }
 
 section.new-tweet form {
@@ -27,8 +28,7 @@ section.new-tweet #tweet-text {
   border-top-style: hidden;
   border-right-style: hidden;
   border-left-style: hidden;
-  border-bottom-style: line;
-  border-bottom-width: 5px;
+  border-bottom: 5px solid #545149;
   resize: none;
   margin-bottom: 15px; 
 }
