@@ -28,7 +28,7 @@ const createTweetElement = function(object) {
         </div>
       </footer>
   `;
-  $('#all-tweets').append($tweet);
+  $('#all-tweets').prepend($tweet);
 };
 
 const renderTweets = function(array) {
@@ -40,7 +40,6 @@ const renderTweets = function(array) {
 const loadTweets = function() {
   $.ajax({ url: '/tweets', method: 'GET' })
     .then(function(response) {
-      console.log(response);
       renderTweets(response);
     });
 };
@@ -51,7 +50,11 @@ $(document).ready(function() {
     if (this.text.value.length > 0 && this.text.value.length <= 140) {
       let tweet = $(this).serialize();
       let postURL = $(this).attr("action");
-      $.ajax({ url: postURL , method: 'POST', data: tweet });
+      $.ajax({ url: postURL , method: 'POST', data: tweet })
+        .then(function() {
+          $('#tweet-text').val('');
+          loadTweets();
+        });
     } else if (!this.text.value.length) {
       alert("Uh oh, looks like your tweet is empty!");
     } else if (this.text.value.length > 140) {
