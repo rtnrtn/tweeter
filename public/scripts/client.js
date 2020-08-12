@@ -47,13 +47,18 @@ const loadTweets = function() {
 
 $(document).ready(function() {
   $('#new-tweet').on('submit', function(event) {
-    let tweet = $(this).serialize();
-    let postURL = $(this).attr("action");
     event.preventDefault();
-    $.ajax({ url: postURL , method: 'POST', data: tweet });
-      
+    if (this.text.value.length > 0 && this.text.value.length <= 140) {
+      let tweet = $(this).serialize();
+      let postURL = $(this).attr("action");
+      $.ajax({ url: postURL , method: 'POST', data: tweet });
+    } else if (!this.text.value.length) {
+      alert("Uh oh, looks like your tweet is empty!");
+    } else if (this.text.value.length > 140) {
+      alert("Uh oh, looks like your tweet is too long!");
+    }
   });
-
+  
   loadTweets();
 
 });
