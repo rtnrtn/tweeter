@@ -74,6 +74,7 @@ $(document).ready(function() {
       $.ajax({ url: postURL , method: 'POST', data: tweet })
         .then(function() {
           $('#tweet-text').val('');
+          $('.counter').val('140');
           loadTweets();
         });
     } else if (!this.text.value.length) {
