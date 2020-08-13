@@ -8,9 +8,9 @@ Implemented one stretch aspect: "Write a new tweet" button in top right nav bar.
 
 ## Final Product
 
-!["Screenshot of tweet feed"](link)
-!["Screenshot of new tweet box"](link)
-!["Screenshot of empty tweet error message"](link)
+!["Screenshot of tweet feed"](https://github.com/rtnrtn/tweeter/blob/master/docs/tweets.png?raw=true)
+!["Screenshot of new tweet box"](https://github.com/rtnrtn/tweeter/blob/master/docs/new-tweet-box.png?raw=true)
+!["Screenshot of empty tweet error message"](https://github.com/rtnrtn/tweeter/blob/master/docs/empty-tweet-error-msg.png?raw=true)
 
 ## Getting Started
 
