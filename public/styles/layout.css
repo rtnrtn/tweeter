@@ -34,3 +34,14 @@ body {
 main.container {
   width: 90%;
 }
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+}

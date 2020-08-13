@@ -19,13 +19,15 @@ section.new-tweet #error {
   width: 100%;
   padding-top: 5px;
   padding-bottom: 5px;
-  margin-bottom: 10px;
+  margin-top: 50px;
+  margin-bottom: 5px;
 }
 
 section.new-tweet form {
   display: flex;
   width: 100%;
   flex-flow: column wrap;
+  margin-top: 50px;
 }
 
 section.new-tweet label {
@@ -54,4 +56,15 @@ section.new-tweet button {
   border: #4056A1;
   color: #FFFFFF;
   padding: 5px 10px;
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  section.new-tweet {
+    display: flex;
+    max-width: 70%;
+    margin-top: 150px;
+    margin-left: 150px;
+    margin-right: 150px;
+  }
 }
