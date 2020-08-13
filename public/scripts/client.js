@@ -4,6 +4,12 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+const escapeTweetText =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 const createTweetElement = function(object) {
   let timestamp = `${object.created_at}`;
   let relativeDate = moment.unix(timestamp / 1000).fromNow();
@@ -18,7 +24,7 @@ const createTweetElement = function(object) {
           <h7>${object.user.handle}</h7>
         </div>
       </header>
-      <p>${object.content.text}</p>
+      <p>${escapeTweetText(object.content.text)}</p>
       <footer>
         <div>${relativeDate}</div>
         <div class="social-actions">
