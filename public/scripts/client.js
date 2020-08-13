@@ -51,8 +51,10 @@ const loadTweets = function() {
 };
 
 $(document).ready(function() {
+  $('#error').hide();
   $('#new-tweet').on('submit', function(event) {
     event.preventDefault();
+    $('#error').hide();
     if (this.text.value.length > 0 && this.text.value.length <= 140) {
       let tweet = $(this).serialize();
       let postURL = $(this).attr("action");
@@ -62,9 +64,9 @@ $(document).ready(function() {
           loadTweets();
         });
     } else if (!this.text.value.length) {
-      alert("Uh oh, looks like your tweet is empty!");
+      $('#error').html("Uh oh, your tweet is empty!").slideDown("slow");
     } else if (this.text.value.length > 140) {
-      alert("Uh oh, looks like your tweet is too long!");
+      $('#error').html("Uh oh, your tweet is too long!").slideDown("slow");
     }
   });
   
