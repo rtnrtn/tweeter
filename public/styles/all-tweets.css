@@ -62,12 +62,17 @@ section#all-tweets footer {
   font-size: 15px;
 }
 
+section#all-tweets footer img {
+  width: 15px;
+  height: 15px;
+}
+
 /* Desktop styles */
 @media only screen and (min-width: 1024px) {
   section#all-tweets {
     display: flex;
     max-width: 70%;
     margin-left: 150px;
-    margin-right: 150px;
+    margin-right: 75px;
   }
 }

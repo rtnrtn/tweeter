@@ -48,7 +48,8 @@ section.new-tweet #tweet-text {
   border-left-style: hidden;
   border-bottom: 5px solid #545149;
   resize: none;
-  margin-bottom: 15px; 
+  margin-bottom: 15px;
+  outline: none; 
 }
 
 section.new-tweet button {
@@ -65,6 +66,6 @@ section.new-tweet button {
     max-width: 70%;
     margin-top: 150px;
     margin-left: 150px;
-    margin-right: 150px;
+    margin-right: 75px;
   }
 }

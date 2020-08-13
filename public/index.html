@@ -45,6 +45,11 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
+      <div>
+        <a href="javascript:void(0)">
+          <button type="button" id="compose-tweet">Write a new tweet</button>
+        </a>
+      </div>
     </nav>
     
     <!-- Header -->
@@ -58,7 +63,7 @@
     </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="container">
+    <main class="container" id="compose">
       <section class="new-tweet">
         <span id="error"></span>
         <form id="new-tweet" class="form-inline" action="/tweets" method="POST">

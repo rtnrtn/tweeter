@@ -1,4 +1,6 @@
 nav {
+  display: flex;
+  justify-content: space-between;
   position: fixed;
   height: 120px;
   top: 0;
@@ -13,6 +15,16 @@ nav span {
   font-family: 'Bungee', sans-serif;
 }
 
+nav button {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1rem;
+  background-color: #FFA500;
+  border: #FFA500;
+  color: #FFFFFF;
+  background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+  padding: 5px 10px;
+}
+
 /* Desktop styles */
 @media only screen and (min-width: 1024px) {
   nav {
@@ -20,6 +32,12 @@ nav span {
     max-width: 100%;
     margin: 0 auto;
     background-color: #4056A1;
+    background-image: none;
+  }
+
+  nav button {
+    background-color: #4056A1;
+    border: #4056A1;
     background-image: none;
   }
 }
