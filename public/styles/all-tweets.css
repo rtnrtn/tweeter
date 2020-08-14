@@ -62,6 +62,14 @@ section#all-tweets footer {
   font-size: 15px;
 }
 
+section#all-tweets article.tweet:hover .social-actions {
+  display: block;
+}
+
+section#all-tweets article.tweet .social-actions {
+  display: none;
+}
+
 section#all-tweets footer img {
   width: 15px;
   height: 15px;
